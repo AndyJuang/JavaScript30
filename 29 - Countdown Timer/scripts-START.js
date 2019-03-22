@@ -48,7 +48,7 @@ function displayEndTime(timestamp) {
   const minutes = time.getMinutes();
 
   const display = `Let's Hack in ${hours < 10 ? '0' : ''}${hours}:${minutes < 10 ? '0' : ''}${minutes}`;
-  endTIme.textContent = display;
+  //endTIme.textContent = display;
 }
 
 function startTimer() {
