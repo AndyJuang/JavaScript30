@@ -43,7 +43,7 @@ function displayTimeLeft(seconds) {
     remainderSeconds = `0${remainderSeconds}`;
   }
 
-  const display =  `${hours}:`${minutes}:${remainderSeconds}`
+  const display =  `${hours}:${minutes}:${remainderSeconds}`
   timeLeft.textContent = display;
 }
 
