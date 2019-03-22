@@ -30,7 +30,7 @@ function timer(seconds) {
 function displayTimeLeft(seconds) {
   
   let minutes = Math.floor(seconds / 60);
-  let hours = Math.floor(seconds % 3600);
+  let hours = Math.floor((seconds % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   let remainderSeconds = seconds % 60;
 
   if (hours < 10) {
