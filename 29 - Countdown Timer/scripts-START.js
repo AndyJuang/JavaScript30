@@ -36,9 +36,6 @@ function displayTimeLeft(seconds) {
   if (hours < 10) {
     hours = `0${hours}`;
   }
-  if (minutes > 60) {
-    minutes = minutes % 3600;
-  }
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
