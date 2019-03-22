@@ -29,7 +29,7 @@ function timer(seconds) {
 
 function displayTimeLeft(seconds) {
   
-  let minutes = seconds ;
+  let minutes = seconds % 60;
   let hours = seconds % 3600;
   let remainderSeconds = seconds % 60;
 
