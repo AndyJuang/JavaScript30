@@ -29,14 +29,16 @@ function timer(seconds) {
 
 function displayTimeLeft(seconds) {
   
-  let minutes = seconds % 3600;
+  let minutes = 100;
   let hours = seconds % 3600;
   let remainderSeconds = seconds % 60;
 
   if (hours < 10) {
     hours = `0${hours}`;
   }
-  
+  if (minutes > 60) {
+    minutes = minutes % 3600;
+  }
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
