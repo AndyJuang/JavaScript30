@@ -28,21 +28,17 @@ function timer(seconds) {
 }
 
 function displayTimeLeft(seconds) {
-  
   let minutes = Math.floor(seconds / 60);
-  let hours = Math.floor((seconds % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   let remainderSeconds = seconds % 60;
 
-  if (hours < 10) {
-    hours = `0${hours}`;
-  }
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
   if (remainderSeconds < 10) {
     remainderSeconds = `0${remainderSeconds}`;
   }
-  const display =  `${hours}:${minutes}:${remainderSeconds}`;
+
+  const display =  `${minutes}:${remainderSeconds}`
   timeLeft.textContent = display;
 }
 
@@ -51,8 +47,8 @@ function displayEndTime(timestamp) {
   const hours = time.getHours();
   const minutes = time.getMinutes();
 
-  const display = `Let's Hack in :${minutes < 10 ? '0' : ''}${minutes}:${minutes < 10 ? '0' : ''}${minutes}`;
-  //endTIme.textContent = display;
+  const display = `Be Back At ${hours < 10 ? '0' : ''}${hours}:${minutes < 10 ? '0' : ''}${minutes}`;
+  endTIme.textContent = display;
 }
 
 function startTimer() {
